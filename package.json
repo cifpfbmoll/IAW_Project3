@@ -4,7 +4,8 @@
   "description": "PRova",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node main",
+    "dev": "nodemon main"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/miquelcabot/IAW-Project3-Team3#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }

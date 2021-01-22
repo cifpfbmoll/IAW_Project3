@@ -14,11 +14,12 @@ services:
     ports:
       - '27017:27017'
     volumes:
-      - ./database:/docker-entrypoint-initdb.d
+      - ./mongo_data:/data/db
+      - ./mongo_init:/docker-entrypoint-initdb.d
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
-      MONGO_INITDB_DATABASE: prova
+      MONGO_INITDB_DATABASE: restaurants
   mongo-express:
     image: mongo-express
     container_name: mongo-express
